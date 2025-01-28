@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1e1e1e;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .catalogue {
+      position: relative;
+      text-align: center;
+      background: #1e1e1e;
+      border: 2px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .catalogue img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .catalogue:hover img {
+      transform: scale(1.1);
+    }
+
+    .catalogue h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .catalogue button {
+      background: #00bcd4;
+      color: #ffffff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .catalogue button:hover {
+      background: #0097a7;
+    }
+
+    .details {
+      font-size: 14px;
+      margin-top: 5px;
+      color: #bbb;
+    }
+
+    .catalogue:hover {
+      transform: translateY(-10px);
+      background: #333;
+    }
+
+    /* Image enlargement modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #ffffff;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .catalogue img {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="items.html">Items</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Catalogue Items</h1>
+    <div class="grid">
+      <div class="catalogue">
+        <img src="Profile_Handle/4036.jpg" alt="Catalogue 2" >
+        <h3>Profile Handle</h3>
+        <button onclick="window.location.href='Profile_Handle.html'">View Items</button>
+      </div>
+
+      <div class="catalogue">
+        <img src="All/Cabinet_handle.jpg" alt="Catalogue 2" >
+        <h3>Cabinet Handle</h3>
+        <button onclick="window.location.href='Cabinet_handle.html'">View Items</button>
+      </div>
+
+      <div class="catalogue">
+        <img src="Aldrop/Zenea.jpg" alt="Catalogue 3" >
+        <h3>Aldrope</h3>
+        <button onclick="window.location.href='Aldrop.html'">View Items</button>
+      </div>
+
+      <div class="catalogue">
+        <img src="All/Stopper.jpg" alt="Catalogue 4" >
+        <h3>Door Stopper</h3>
+        <button onclick="window.location.href='Door Stopper.html'">View Items</button>
+      </div>
+      
+      <div class="catalogue">
+        <img src="Tower%20bolt/Xylo.jpg" alt="Catalogue 5" >
+        <h3>Tower Bolt</h3>
+        <button onclick="window.location.href='Tower Bolt.html'">View Items</button>
+      </div>
+      
+      <div class="catalogue">
+        <img src="All/Khuty.jpg" alt="Catalogue 5" >
+        <h3>Khuty</h3>
+        <button onclick="window.location.href='Khuty.html'">View Items</button>
+      </div>
+      
+      <div class="catalogue">
+        <img src="Mortise/121.jpg" alt="Catalogue 5" >
+        <h3>Mortise</h3>
+        <button onclick="window.location.href='Mortise.html'">View Items</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for image enlargement -->
+  <div class="modal" id="imageModal">
+    <button class="close" onclick="closeModal()">×</button>
+    <img id="modalImage" src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+    }
+  </script>
+</body>
+</html>

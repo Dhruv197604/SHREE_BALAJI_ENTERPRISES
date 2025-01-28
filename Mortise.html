@@ -1,0 +1,259 @@
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="items.html">Items</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Mortise Catalogue</h1>
+
+    <!-- Back button -->
+    <a href="items.html" class="back-button">← Back to Catalogue</a>
+
+    <div class="grid">
+      <!-- Catalogue items -->
+      <div class="catalogue-item">
+        <img src="Mortise/1055.jpg" alt="Profile Handle 1" onclick="openModal('Mortise/1055.jpg')">
+        <h3>1055</h3>
+        <p>Antique Gold Finish.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Mortise/1059.jpg" alt="Profile Handle 2" onclick="openModal('Mortise/1059.jpg')">
+        <h3>1059</h3>
+        <p>Antique Gold Finish.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Mortise/1063.jpg" alt="Profile Handle 3" onclick="openModal('Mortise/1063.jpg')">
+        <h3>1063</h3>
+        <p>Antique Gold Finish.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Mortise/SS-156.jpg" alt="Profile Handle 4" onclick="openModal('Mortise/SS-156.jpg')">
+        <h3>SS-156</h3>
+        <p>Antique Gold Finish.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Mortise/SS-177.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/SS-177.jpg')">
+        <h3>SS-177</h3>
+        <p>Satin-Rosegold Finish.</p>
+      </div>
+      
+      <div class="catalogue-item">
+        <img src="Mortise/SS-166.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/SS-166.jpg')">
+        <h3>SS-166</h3>
+        <p>Rosegold Gloss-Matt Finish.</p>
+      </div>
+      
+      <div class="catalogue-item">
+        <img src="Mortise/1060.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/1060.jpg')">
+        <h3>1060</h3>
+        <p>Rosegold Satin Black Finish.</p>
+      </div>
+      
+      <div class="catalogue-item">
+        <img src="Mortise/1035.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/1035.jpg')">
+        <h3>1035</h3>
+        <p>Satin-Black Finish.</p>
+      </div>
+      
+      <div class="catalogue-item">
+        <img src="Mortise/1037.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/1037.jpg')">
+        <h3>1037</h3>
+        <p>Satin-Black Finish.</p>
+      </div>
+      
+      <div class="catalogue-item">
+        <img src="Mortise/1039.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/1039.jpg')">
+        <h3>1039</h3>
+        <p>Satin-Black Finish.</p>
+      </div>
+      
+       <div class="catalogue-item">
+        <img src="Mortise/SS-140.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/SS-140.jpg')">
+        <h3>SS-140</h3>
+        <p>CP Finish.</p>
+      </div>
+      
+       <div class="catalogue-item">
+        <img src="Mortise/New%20Tilak.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/New%20Tilak.jpg')">
+        <h3>New Tilak</h3>
+        <p>CP Finish.</p>
+      </div>
+      
+       <div class="catalogue-item">
+        <img src="Mortise/17%20no.jpg" alt="Profile Handle 5" onclick="openModal('Mortise/17%20no.jpg')">
+        <h3>17.No</h3>
+        <p>CP Finish.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for image enlargement -->
+  <div class="modal" id="imageModal">
+    <button class="close" onclick="closeModal()">×</button>
+    <img id="modalImage" src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+    }
+  </script>
+
+  <style>
+    /* General Styles for Dark Mode */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1c1c1c;
+      padding: 15px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      display: block;
+      text-align: left;
+      font-size: 16px;
+      color: #00bcd4;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .back-button:hover {
+      text-decoration: underline;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .catalogue-item {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .catalogue-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .catalogue-item img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .catalogue-item h3 {
+      font-size: 20px;
+      color: #ffffff;
+      margin: 10px 0;
+    }
+
+    .catalogue-item p {
+      font-size: 14px;
+      color: #b0b0b0;
+      margin-bottom: 0;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #ffffff;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav a {
+        margin: 0 10px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</body>
