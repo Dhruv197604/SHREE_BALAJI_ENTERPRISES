@@ -1,0 +1,155 @@
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="items.html">Items</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Profile Handle Catalogue</h1>
+    <a href="items.html" class="back-button">&larr; Back to Catalogue</a>
+
+    <div class="grid">
+      <div class="catalogue-item">
+        <img src="Profile_Handle/1073.jpg" alt="Profile Handle 1" onclick="openModal('Profile_Handle/1073.jpg')">
+        <h3>1073</h3>
+        <p>Two colors available: Rosegold and Satin.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Profile_Handle/4091.jpg" alt="Profile Handle 2" onclick="openModal('Profile_Handle/4091.jpg')">
+        <h3>4091</h3>
+        <p>Two colors available: Rosegold and black gold.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Profile_Handle/Alenki.jpg" alt="Profile Handle 3" onclick="openModal('Profile_Handle/Alenki.jpg')">
+        <h3>Alenki</h3>
+        <p>Available in Rosegold.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Profile_Handle/4036.jpg" alt="Profile Handle 4" onclick="openModal('Profile_Handle/4036.jpg')">
+        <h3>4036</h3>
+        <p>Antique black, two-tone finish.</p>
+      </div>
+      <div class="catalogue-item">
+        <img src="Profile_Handle/Leher.jpg" alt="Profile Handle 5" onclick="openModal('Profile_Handle/Leher.jpg')">
+        <h3>Leher</h3>
+        <p>Available in Rosegold, SS, and Black.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="imageModal">
+    <button class="close" onclick="closeModal()">&times;</button>
+    <img id="modalImage" src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      document.getElementById('modalImage').src = imageSrc;
+      document.getElementById('imageModal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #1c1c1c;
+      padding: 15px;
+    }
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 5px 10px;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 32px;
+    }
+    .back-button {
+      display: inline-block;
+      font-size: 18px;
+      color: #00bcd4;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .catalogue-item {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .catalogue-item:hover {
+      transform: scale(1.05);
+    }
+    .catalogue-item img {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .modal .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .catalogue-item img {
+        height: 150px;
+      }
+    }
+  </style>
+</body>
